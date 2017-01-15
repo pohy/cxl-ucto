@@ -6,3 +6,8 @@ cd client
 npm install
 npm start
 ```
+
+
+## Screenshot
+
+!(docs/screenshot.png)[docs/screenshot.png]
