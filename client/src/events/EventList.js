@@ -15,6 +15,18 @@ class EventList extends Component {
                 start: new Date('2017-01-19'),
                 end: new Date('2017-01-21'),
                 frozen: false
+            }, {
+                id: 2,
+                title: 'Da Vinci',
+                start: new Date('2017-01-19'),
+                end: new Date('2017-01-21'),
+                frozen: false
+            }, {
+                id: 3,
+                title: 'Da Vinci',
+                start: new Date('2017-01-19'),
+                end: new Date('2017-01-21'),
+                frozen: false
             }]
         };
     }
@@ -29,7 +41,7 @@ class EventList extends Component {
                     <Link to={`/events/${event.id}`}>
                         <FlatButton
                             iconClassName="material-icons"
-                            label="Edit"
+                            label="Detail"
                             icon={<FontIcon className="material-icons" children="edit"/>}
                             />
                     </Link>
@@ -39,8 +51,13 @@ class EventList extends Component {
 
     render() {
         return (
-            <Table>
-                <TableHeader displaySelectAll={false}>
+            <Table
+                className="events"
+            >
+                <TableHeader
+                    displaySelectAll={false}
+                    adjustForCheckbox={false}
+                >
                     <TableRow>
                         <TableHeaderColumn children={'Name'}/>
                         <TableHeaderColumn children={'From'}/>
@@ -51,6 +68,7 @@ class EventList extends Component {
                 <TableBody
                     children={this.renderEvents()}
                     displayRowCheckbox={false}
+                    showRowHover={true}
                 />
             </Table>
         );

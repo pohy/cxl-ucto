@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import {browserHistory} from 'react-router';
+import 'materialize-css/dist/css/materialize.min.css';
 
-import './app.css';
+import './App.css';
 import AppMenu from './AppMenu';
 
 class App extends Component {
